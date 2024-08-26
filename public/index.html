@@ -16,14 +16,14 @@
 
 <body>
     <div class="row">
-        <div class="image-container"><img src="img/cir.png" height="200" width="200"/></div>
-        <div class="image-container"><img src="img/tri.png" height="200" width="200"/></div>
-        <div class="image-container"><img src="img/squ.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="cir_id"  src="img/cir.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="tri_id" src="img/tri.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="p3"  src="img/squ.png" height="200" width="200"/></div>
     </div>
 
     <div class="row">
-        <div class="image-container"><img src="img/hex.png" height="200" width="200"/></div>
-        <div class="image-container"><img src="img/rec.png" height="200" width="200"/></div>
+        <div  class="image-container"><img id="p4" src="img/hex.png" height="200" width="200"/></div>
+        <div  class="image-container"><img id="p5" src="img/rec.png" height="200" width="200"/></div>
         <div class="image-container"><img src="img/sta.png" height="200" width="200"/></div>
         </div>
 
@@ -32,4 +32,14 @@
         <div class="image-container"><img src="img/sqr.png" height="200" width="200"/></div>
         <div class="image-container"><img src="img/her.png" height="200" width="200"/></div>
     </div>
+
+<script>
+    const cir_variable = document.getElementById('cir_id')
+    const cir_audio = new Audio('sounds/sound_1.mp3')
+    cir_variable.onpointerdown = () => cir_audio.play()
+
+    const tri_variable = document.getElementById('tri_id')
+    const tri_audio = new Audio('sounds/sound_5.mp3')
+    tri_variable.onpointerdown = () => tri_audio.play()
+</script>
 </body>
