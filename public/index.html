@@ -16,7 +16,7 @@
 
 <body>
     <div class="row">
-
+        <div class="image-container"><img id="cup_id"  src="img/Asset_1.png" height="200" width="200"/></div>
         <div class="image-container"><img id="cir_id"  src="img/cir.png" height="200" width="200"/></div>
         <div class="image-container"><img id="tri_id" src="img/tri.png" height="200" width="200"/></div>
         <div class="image-container"><img id="p3"  src="img/squ.png" height="200" width="200"/></div>
@@ -40,7 +40,7 @@
     const cir_audio = new Audio('sounds/sound_1.mp3')
     cir_variable.onpointerdown = () => { 
         cir_audio.play()
-        cir_variable.src='img/tri.png'
+        cir_variable.src='img/Asset_1.png'
         setTimeout(() => cir_variable.src='img/cir.png',1000)
     }
 
