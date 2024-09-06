@@ -16,6 +16,8 @@
 
 <body>
     <div class="row">
+        <div class="image-container"><img id="asset"  src="img/bubbleTea.png" height="200" width="200"/></div>
+
         <div class="image-container"><img id="cir_id"  src="img/cir.png" height="200" width="200"/></div>
         <div class="image-container"><img id="tri_id" src="img/tri.png" height="200" width="200"/></div>
         <div class="image-container"><img id="p3"  src="img/squ.png" height="200" width="200"/></div>
@@ -31,15 +33,27 @@
         <div class="image-container"><img src="img/trr.png" height="200" width="200"/></div>
         <div class="image-container"><img src="img/sqr.png" height="200" width="200"/></div>
         <div class="image-container"><img src="img/her.png" height="200" width="200"/></div>
+        <div class="image-container"><img src="img/sqr.png" onmouseover="this.src='img/trr.png';" onmouseout="this.src='img/sqr.png';" height="200" width="200"/></div>
     </div>
 
 <script>
     const cir_variable = document.getElementById('cir_id')
     const cir_audio = new Audio('sounds/sound_1.mp3')
-    cir_variable.onpointerdown = () => cir_audio.play()
+    cir_variable.onpointerdown = () => { 
+        cir_audio.play()
+        cir_variable.src='img/tri.png'
+        setTimeout(() => cir_variable.src='img/cir.png',1000)
+    }
 
     const tri_variable = document.getElementById('tri_id')
     const tri_audio = new Audio('sounds/sound_5.mp3')
     tri_variable.onpointerdown = () => tri_audio.play()
+    tri_variable.onpointerover = () => tri_variable.src ='img/squ.png'
+    tri_variable.onpointerout = () => tri_variable.src ='img/tri.png'
+
+   
+    
+    
+
 </script>
 </body>
