@@ -11,46 +11,126 @@
             vertical-align: middle;
             padding:20px;
         }
+        img {
+            cursor: none; /* Hide the default cursor */
+        }
+        .custom-cursor {
+            position: absolute;
+            pointer-events: none; /* Make sure the cursor doesn't interfere with mouse events */
+            transform-origin: center;
+            display: none; /* Hide by default */
+        }
     </style>
 </head>
 
 <body>
+    <img id="customCursor" class="custom-cursor" src="img/pacman.png" />
     <div class="row">
-        <div class="image-container"><img id="cup_id"  src="img/Asset_1.png" height="200" width="200"/></div>
-        <div class="image-container"><img id="cir_id"  src="img/cir.png" height="200" width="200"/></div>
-        <div class="image-container"><img id="tri_id" src="img/tri.png" height="200" width="200"/></div>
-        <div class="image-container"><img id="p3"  src="img/squ.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="1_id"  src="img/before/1.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="2_id"  src="img/before/2.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="3_id"  src="img/before/3.png" height="200" width="200"/></div>
+     
     </div>
 
     <div class="row">
-        <div  class="image-container"><img id="p4" src="img/hex.png" height="200" width="200"/></div>
-        <div  class="image-container"><img id="p5" src="img/rec.png" height="200" width="200"/></div>
-        <div class="image-container"><img src="img/sta.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="4_id"  src="img/before/4.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="5_id"  src="img/before/5.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="6_id"  src="img/before/6.png" height="200" width="200"/></div>
         </div>
 
     <div class="row">
-        <div class="image-container"><img src="img/trr.png" height="200" width="200"/></div>
-        <div class="image-container"><img src="img/sqr.png" height="200" width="200"/></div>
-        <div class="image-container"><img src="img/her.png" height="200" width="200"/></div>
-        <div class="image-container"><img src="img/sqr.png" onmouseover="this.src='img/trr.png';" onmouseout="this.src='img/sqr.png';" height="200" width="200"/></div>
+        <div class="image-container"><img id="7_id"  src="img/before/7.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="8_id"  src="img/before/8.png" height="200" width="200"/></div>
+        <div class="image-container"><img id="9_id"  src="img/before/9.png" height="200" width="200"/></div>
     </div>
 
 <script>
-    const cir_variable = document.getElementById('cir_id')
-    const cir_audio = new Audio('sounds/sound_1.mp3')
-    cir_variable.onpointerdown = () => { 
-        cir_audio.play()
-        cir_variable.src='img/Asset_1.png'
-        setTimeout(() => cir_variable.src='img/cir.png',1000)
-    }
+    
+    const variable_one = document.getElementById('1_id')
+    const audio_one = new Audio('sounds/tea.mp3')
+    variable_one.onpointerdown = () => audio_one.play()
 
-    const tri_variable = document.getElementById('tri_id')
-    const tri_audio = new Audio('sounds/sound_5.mp3')
-    tri_variable.onpointerdown = () => tri_audio.play()
-    tri_variable.onpointerover = () => tri_variable.src ='img/squ.png'
-    tri_variable.onpointerout = () => tri_variable.src ='img/tri.png'
+    variable_one.onpointerover = () => variable_one.src ='img/after/11.png'
+    variable_one.onpointerout = () => variable_one.src ='img/before/1.png'
 
-   
+    const variable_two = document.getElementById('2_id')
+    const audio_two = new Audio('sounds/eat.mp3')
+    variable_two.onpointerdown = () => audio_two.play()
+
+    variable_two.onpointerover = () => variable_two.src ='img/after/22.png'
+    variable_two.onpointerout = () => variable_two.src ='img/before/2.png'
+
+    const variable_three = document.getElementById('3_id')
+    const audio_three = new Audio('sounds/sushi.mp3')
+    variable_three.onpointerdown = () => audio_three.play()
+
+    variable_three.onpointerover = () => variable_three.src ='img/after/33.png'
+    variable_three.onpointerout = () => variable_three.src ='img/before/3.png'
+
+    const variable_four = document.getElementById('4_id')
+    const audio_four = new Audio('sounds/noodlesoup.mp3')
+    variable_four.onpointerdown = () => audio_four.play()
+
+    variable_four.onpointerover = () => variable_four.src ='img/after/44.png'
+    variable_four.onpointerout = () => variable_four.src ='img/before/4.png'
+
+    const variable_five = document.getElementById('5_id')
+    const audio_five = new Audio('sounds/sweets.mp3')
+    variable_five.onpointerdown = () => audio_five.play()
+
+    variable_five.onpointerover = () => variable_five.src ='img/after/55.png'
+    variable_five.onpointerout = () => variable_five.src ='img/before/5.png'
+
+    const variable_six = document.getElementById('6_id')
+    const audio_six = new Audio('sounds/pizza.mp3')
+    variable_six.onpointerdown = () => audio_six.play()
+
+    variable_six.onpointerover = () => variable_six.src ='img/after/66.png'
+    variable_six.onpointerout = () => variable_six.src ='img/before/6.png'
+
+    const variable_seven = document.getElementById('7_id')
+    const audio_seven = new Audio('sounds/boba.mp3')
+    variable_seven.onpointerdown = () => audio_seven.play()
+
+    variable_seven.onpointerover = () => variable_seven.src ='img/after/77.png'
+    variable_seven.onpointerout = () => variable_seven.src ='img/before/7.png'
+
+    const variable_eight = document.getElementById('8_id')
+    const audio_eight = new Audio('sounds/milk.mp3')
+    variable_eight.onpointerdown = () => audio_eight.play()
+
+    variable_eight.onpointerover = () => variable_eight.src ='img/after/88.png'
+    variable_eight.onpointerout = () => variable_eight.src ='img/before/8.png'
+
+    const variable_nine = document.getElementById('9_id')
+    const audio_nine = new Audio('sounds/hotdog.mp3')
+    variable_nine.onpointerdown = () => audio_nine.play()
+
+    variable_nine.onpointerover = () => variable_nine.src ='img/after/99.png'
+    variable_nine.onpointerout = () => variable_nine.src ='img/before/9.png'
+
+    
+
+    const customCursor = document.getElementById('customCursor');
+    const images = document.querySelectorAll('img');
+
+    images.forEach(img => {
+        img.addEventListener('mousemove', (e) => {
+            const rect = img.getBoundingClientRect();
+            const imgCenterX = rect.left + rect.width / 2;
+            const imgCenterY = rect.top + rect.height / 2;
+            const angle = Math.atan2( - e.clientY + imgCenterY, - e.clientX + imgCenterX) * 180 / Math.PI;
+
+            customCursor.style.left = `${e.clientX}px`;
+            customCursor.style.top = `${e.clientY}px`;
+            customCursor.style.transform = `rotate(${angle}deg)`;
+            customCursor.style.display = 'block';
+        });
+
+        img.addEventListener('mouseleave', () => {
+            customCursor.style.display = 'none';
+        });
+    });
     
     
 
